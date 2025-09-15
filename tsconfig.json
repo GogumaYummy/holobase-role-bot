@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "esnext", // discordx 요구사항
+    "target": "esnext", // discordx 요구사항
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": false, // discordx 요구사항
+    "experimentalDecorators": true, // discordx 요구사항
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
+}
