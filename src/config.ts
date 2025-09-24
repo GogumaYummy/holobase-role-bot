@@ -1,8 +1,3 @@
-if (process.env.NODE_ENV === 'dev') {
-  const dotenv = await import('dotenv');
-  dotenv.config();
-}
-
 function getEnv(key: string): string {
   const value = process.env[key];
 
