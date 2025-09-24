@@ -1,6 +1,7 @@
 import { GatewayIntentBits } from 'discord.js';
 import { Client } from 'discordx';
 import { NODE_ENV, GUILD_ID, BOT_TOKEN } from './config.js';
+import './commands/index.js';
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
