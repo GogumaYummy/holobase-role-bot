@@ -13,4 +13,8 @@ client.once('clientReady', async () => {
   console.info(`${client.user!.username} 준비 완료`);
 });
 
+client.on('interactionCreate', (interaction) => {
+  client.executeInteraction(interaction);
+});
+
 await client.login(BOT_TOKEN);
