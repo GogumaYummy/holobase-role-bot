@@ -8,9 +8,9 @@ const client = new Client({
 });
 
 client.once('clientReady', async () => {
-  console.info(`${client.user!.username} 준비 완료`);
+  await client.initApplicationCommands();
 
-  client.initApplicationCommands();
+  console.info(`${client.user!.username} 준비 완료`);
 });
 
 await client.login(BOT_TOKEN);
