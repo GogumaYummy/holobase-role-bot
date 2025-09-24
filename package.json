@@ -17,5 +17,8 @@
   "dependencies": {
     "discord.js": "^14.22.1",
     "discordx": "^11.12.6"
+  },
+  "scripts": {
+    "dev": "npx tsc && cross-env NODE_ENV=dev node dist/index.js"
   }
 }
