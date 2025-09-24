@@ -1,15 +1,10 @@
-if (process.env.NODE_ENV === 'dev') {
-  const dotenv = await import('dotenv');
-  dotenv.config();
-}
-
 import { GatewayIntentBits } from 'discord.js';
 import { Client } from 'discordx';
+import { NODE_ENV, GUILD_ID, BOT_TOKEN } from './config.js';
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
-  botGuilds:
-    process.env.NODE_ENV === 'dev' ? [process.env.GUILD_ID!] : undefined,
+  botGuilds: NODE_ENV === 'dev' ? [GUILD_ID!] : undefined,
 });
 
 client.once('clientReady', async () => {
@@ -18,4 +13,4 @@ client.once('clientReady', async () => {
   client.initApplicationCommands();
 });
 
-client.login(process.env.BOT_TOKEN!);
+client.login(BOT_TOKEN!);
