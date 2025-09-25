@@ -7,7 +7,7 @@ export class Ping {
   async ping(interaction: CommandInteraction) {
     await interaction.reply({
       content: '퐁!',
-      flags: ['Ephemeral'],
+      flags: [MessageFlags.Ephemeral],
     });
   }
 }
