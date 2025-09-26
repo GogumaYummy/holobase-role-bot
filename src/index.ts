@@ -1,21 +1,11 @@
+import { ApplicationCommandRegistries, SapphireClient } from '@sapphire/framework';
 import { GatewayIntentBits } from 'discord.js';
-import { Client } from 'discordx';
-import { NODE_ENV, GUILD_ID, BOT_TOKEN } from './config.js';
-import './commands/index.js';
+import { BOT_TOKEN, GUILD_ID, NODE_ENV } from './config.js';
 
-const client = new Client({
-  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
-  botGuilds: NODE_ENV === 'dev' ? [GUILD_ID] : undefined,
-});
+const client = new SapphireClient({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 
-client.once('clientReady', async () => {
-  await client.initApplicationCommands();
-
-  console.info(`${client.user!.username} 준비 완료`);
-});
-
-client.on('interactionCreate', (interaction) => {
-  client.executeInteraction(interaction);
-});
+if (NODE_ENV === 'dev') {
+  ApplicationCommandRegistries.setDefaultGuildIds([GUILD_ID]);
+}
 
 await client.login(BOT_TOKEN);
