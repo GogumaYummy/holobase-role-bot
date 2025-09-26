@@ -8,6 +8,7 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@sapphire/ts-config": "^5.0.1",
     "@types/node": "^24.4.0",
     "dotenv-cli": "^10.0.0",
     "nodemon": "^3.1.10",
@@ -16,6 +17,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@sapphire/framework": "^5.3.7",
     "discord.js": "^14.22.1",
     "discordx": "^11.12.6"
   },
