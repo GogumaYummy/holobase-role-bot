@@ -22,8 +22,7 @@
   "dependencies": {
     "@sapphire/discord.js-utilities": "^7.3.3",
     "@sapphire/framework": "^5.3.7",
-    "discord.js": "^14.22.1",
-    "discordx": "^11.12.6"
+    "discord.js": "^14.22.1"
   },
   "scripts": {
     "dev": "dotenv -e .env -- nodemon --watch src --ext ts --exec \"tsx src/index.ts\""
