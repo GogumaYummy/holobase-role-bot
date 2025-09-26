@@ -8,13 +8,16 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@eslint/js": "^9.36.0",
     "@sapphire/ts-config": "^5.0.1",
     "@types/node": "^24.4.0",
     "dotenv-cli": "^10.0.0",
+    "eslint": "^9.36.0",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1"
   },
   "dependencies": {
     "@sapphire/framework": "^5.3.7",
