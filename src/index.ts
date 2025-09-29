@@ -1,6 +1,6 @@
 import { ApplicationCommandRegistries, SapphireClient } from '@sapphire/framework';
 import { GatewayIntentBits } from 'discord.js';
-import { BOT_TOKEN, GUILD_ID, NODE_ENV } from './env.config.js';
+import { BOT_TOKEN, GUILD_ID, NODE_ENV } from './env.js';
 
 const client = new SapphireClient({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 
